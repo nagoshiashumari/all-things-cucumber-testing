@@ -1,6 +1,6 @@
 module.exports = function() {
-  this.Given(/^I am on the Weebly homepage$/, function () {
-    client.url('https://www.weebly.com');
+  this.Given(/^I am on the website homepage$/, function () {
+    client.url('www.example.com');
   });
 
   this.When(/^I click the login button$/, function () {
@@ -12,17 +12,17 @@ module.exports = function() {
   });
 
   this.Then(/^I enter my username in the email field$/, function () {
-    client.setValue('#weebly-username', 'daniela.h@weebly.com');
+    client.setValue('#username', 'test@example.com');
   });
 
   this.Then(/^I enter my password in the password field$/, function () {
-    client.setValue('#weebly-password', 'weebly');
+    client.setValue('#password', 'test');
   });
 
   this.Then(/^And I click the login button$/, function () {
     client.execute("document.getElementsByClassName('login-overlay')[0].style.display = 'none';");
     client.timeoutsImplicitWait(1000);
-    client.click('#weebly-login');
+    client.click('#login');
   });
 
 };
