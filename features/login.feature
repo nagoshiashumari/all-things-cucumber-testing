@@ -1,7 +1,7 @@
 Feature: Login as an existing user
 
 	As an existing user
-	I want to login to Weebly
+	I want to login to the website
 	So that I can work on my website
 
 	@watch
